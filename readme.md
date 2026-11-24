@@ -12,6 +12,10 @@ De même, il s'agit de créer le projet backend à l'aide d'expressJS (cloné de
 
 Pour cette étape, il s'agit de partager le travail (tout le tavail, c'est à dire le dossier LeCatalogueDesPizzas) sur github (ici, aucune difficultés rencontrés)
 
+# Etape 4: Créer une base de données
+
+L'idée ici est de créer une base de données dans SQLectron afin de rasembler toutes les données pour le backend du projet (ici, pas de difficultées rencontrées)
+
 # Le Projet : Le Catalogue Des Pizzas
 
 le but du projet est de répertorier plusieurs pizzas dans un catalogue avec des informations qui leurs seront asssociés, afin de pouvoir en savoir plus sur la pizza et tout son univers
