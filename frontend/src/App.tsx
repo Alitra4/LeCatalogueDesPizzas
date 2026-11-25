@@ -4,6 +4,7 @@ import "./App.css";
 
 function App() {
   type pizza = {
+    id: number;
     nom: string;
     image: string;
     description: string;
@@ -24,7 +25,11 @@ function App() {
   return (
     <>
       {pizzapi.map((pizza) => {
-        return <p>{pizza.nom}</p>;
+        return (
+          <p key={pizza.id}>
+            {pizza.nom} : {pizza.ingredients}
+          </p>
+        );
       })}
     </>
   );
