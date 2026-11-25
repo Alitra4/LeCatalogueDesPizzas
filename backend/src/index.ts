@@ -5,8 +5,6 @@ import { Pool } from "pg";
 
 config();
 const PORT = process.env.API_PORT;
-const app = express();
-app.use(cors());
 
 const db = new Pool({
   host: process.env.PG_HOST,
@@ -16,8 +14,11 @@ const db = new Pool({
   password: process.env.PG_PASSWORD,
 });
 
+const app = express();
+app.use(cors());
+
 app.get("/PizzAPi", async (_req, res) => {
-  const { rows } = await db.query("select * from pizzapi");
+  const { rows } = await db.query("select * from pizza");
   res.json(rows);
 });
 
