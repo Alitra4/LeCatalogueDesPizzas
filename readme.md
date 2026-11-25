@@ -20,6 +20,10 @@ L'idée ici est de créer une base de données dans SQLectron afin de rasembler 
 
 L'objectif est de lier la base de données au backend afin de pouvoir à terme le manipuler dans le frontend (ici, j'ai réussie à écrire le lien entre la base de données et le backend et je n'ai pas réussie à intégrer les informations de connexion au serveur SQLectron, wip... (ça y est j'ai compris, uniquement des erreur de syntaxe))
 
+# Etape 6 : Lier le backend au frontend
+
+De même, il s'agit de lier le backend au frontend afin d'envoyé, d'afficher puis de manipuler les informations de la base de données sur l'interface utilisateur (ici, j'ai réussie à écrire quasi-tout l'appel d'api, il ne me reset plus qu'à comprendre pourquoi ça n'affiche rien, et aussi le fonctionnement du log[] dans le useState pour pouvoir l'utiliser au mieux sans avoir d'erreurs)
+
 # Le Projet : Le Catalogue Des Pizzas
 
 le but du projet est de répertorier plusieurs pizzas dans un catalogue avec des informations qui leurs seront asssociés, afin de pouvoir en savoir plus sur la pizza et tout son univers
