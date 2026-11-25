@@ -10,8 +10,8 @@ const db = new Pool({
   host: process.env.PG_HOST,
   port: Number(process.env.PG_PORT),
   user: process.env.PG_USER,
-  database: process.env.PG_DATABASE,
   password: process.env.PG_PASSWORD,
+  database: process.env.PG_DATABASE,
 });
 
 const app = express();
@@ -20,10 +20,6 @@ app.use(cors());
 app.get("/PizzAPi", async (_req, res) => {
   const { rows } = await db.query("select * from pizza");
   res.json(rows);
-});
-
-app.get("/logs", (req, res) => {
-  res.json([]);
 });
 
 app.listen(PORT, () => {

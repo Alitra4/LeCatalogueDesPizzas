@@ -18,7 +18,7 @@ L'idée ici est de créer une base de données dans SQLectron afin de rasembler 
 
 # Etape 5 : Lier la base de données au backend
 
-L'objectif est de lier la base de données au backend afin de pouvoir à terme le manipuler dans le frontend (ici, j'ai réussie à écrire le lien entre la base de données et le backend mais je n'ai pas réussie à intégrer les informations de connexion au serveur SQLectron, wip...)
+L'objectif est de lier la base de données au backend afin de pouvoir à terme le manipuler dans le frontend (ici, j'ai réussie à écrire le lien entre la base de données et le backend et je n'ai pas réussie à intégrer les informations de connexion au serveur SQLectron, wip... (ça y est j'ai compris, uniquement des erreur de syntaxe))
 
 # Le Projet : Le Catalogue Des Pizzas
 
