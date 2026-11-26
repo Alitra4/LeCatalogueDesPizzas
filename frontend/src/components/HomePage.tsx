@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-type pizza = {
+type Pizza = {
   id: number;
   nom: string;
   image: string;
@@ -9,12 +9,12 @@ type pizza = {
 };
 
 export default function HomePage() {
-  const [pizzapi, setPizzAPI] = useState<pizza[]>([]);
+  const [pizzapi, setPizzAPI] = useState<Pizza[]>([]);
 
   useEffect(() => {
     async function fetchData() {
-      const rawData = await fetch("http://localhost:3715/logs");
-      const cookedData = (await rawData.json()) as pizza[];
+      const rawData = await fetch("http://localhost:3715/pizzas");
+      const cookedData = (await rawData.json()) as Pizza[];
       setPizzAPI(cookedData);
     }
     fetchData();

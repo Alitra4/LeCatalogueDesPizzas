@@ -17,12 +17,12 @@ const db = new Pool({
 const app = express();
 app.use(cors());
 
-app.get("/logs", async (_req, res) => {
+app.get("/pizzas", async (_req, res) => {
   const { rows } = await db.query("select * from pizzas");
   res.json(rows);
 });
 
-app.get("/logs/:id", async (req, res) => {
+app.get("/pizzas/:id", async (req, res) => {
   const { rows } = await db.query("select * from pizzas where id = $1", [
     Number(req.params.id),
   ]);
