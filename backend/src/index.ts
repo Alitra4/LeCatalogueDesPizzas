@@ -22,6 +22,11 @@ app.get("/logs", async (_req, res) => {
   res.json(rows);
 });
 
+app.get("/logs/:id", async (_req, res) => {
+  const { rows } = await db.query("select from pizzas where id = 1");
+  res.json(rows);
+});
+
 app.listen(PORT, () => {
   console.log(`API available on http://localhost:${PORT} !`);
 });
