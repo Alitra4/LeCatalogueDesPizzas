@@ -2,7 +2,6 @@ import express from "express";
 import { config } from "dotenv";
 import cors from "cors";
 import { Pool } from "pg";
-import { link } from "node:fs";
 
 config();
 const PORT = process.env.API_PORT;
@@ -24,7 +23,7 @@ app.get("/logs", async (_req, res) => {
 });
 
 app.get("/logs/:id", async (req, res) => {
-  const { rows } = await db.query("select from pizzas where id = $1", [
+  const { rows } = await db.query("select * from pizzas where id = $1", [
     Number(req.params.id),
   ]);
   res.json(rows[0]);
