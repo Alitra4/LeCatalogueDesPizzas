@@ -27,3 +27,7 @@ L'objectif est de lier la base de données au backend afin de pouvoir à terme l
 # Etape 6 : Lier le backend au frontend
 
 De même, il s'agit de lier le backend au frontend afin d'envoyé, d'afficher puis de manipuler les informations de la base de données sur l'interface utilisateur (ici, j'ai réussie à écrire quasi-tout l'appel d'api, il ne me reset plus qu'à comprendre pourquoi ça n'affiche rien, et aussi le fonctionnement du log[] dans le useState pour pouvoir l'utiliser au mieux sans avoir d'erreurs (c'est bon, je n'avais pas fait de typage de l'API + quelques erreurs de syntaxe (je dev je junior :p )))
+
+# Etape 7 : Afficher une seule tulpe
+
+Pour cette étape, il faut créer une route entre App.tsx et les differents composants, puis de lier (avec un get.app) un Link de la HomePage à une tulpe spécifique du backend (ici, aucune difficultés rencontrées, hormis d'éternels erreurs de syntaxe, de ponctuation et autres parenthèses...)

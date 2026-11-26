@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router";
 import "./reset.css";
-import "./App.css";
 import HomePage from "./components/HomePage";
 import Fiche from "./components/Fiche";
 
