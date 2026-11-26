@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 
 type Pizza = {
   id: number;
@@ -24,9 +25,13 @@ export default function HomePage() {
     <>
       {pizzapi.map((pizza) => {
         return (
-          <p key={pizza.id}>
-            {pizza.nom} : {pizza.ingredients}
-          </p>
+          <div key={pizza.id}>
+            <Link to={`/pizzas/${pizza.id}`}>
+              <p>
+                {pizza.nom} : {pizza.ingredients}
+              </p>
+            </Link>
+          </div>
         );
       })}
     </>
