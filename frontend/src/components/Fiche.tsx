@@ -16,7 +16,7 @@ export default function Fiche() {
 
   useEffect(() => {
     async function fetchData() {
-      const rawData = await fetch("http://localhost:3715/pizzas/:id");
+      const rawData = await fetch(`http://localhost:3715/pizzas/${id}`);
       const cookedData = (await rawData.json()) as Pizza[];
       setPizzAPI(cookedData);
     }
@@ -25,15 +25,11 @@ export default function Fiche() {
 
   return (
     <>
-      {pizzapi.map((pizza) => {
-        return (
-          <div key={pizza.id}>
-            <p>
-              {pizza.nom} : {pizza.ingredients}
-            </p>
-          </div>
-        );
-      })}
+      <div>
+        <p>
+          {pizzapi.nom} : {pizzapi.ingredients}
+        </p>
+      </div>
     </>
   );
 }
