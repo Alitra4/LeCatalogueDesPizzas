@@ -12,13 +12,13 @@ type Pizza = {
 export default function Fiche() {
   const { id } = useParams();
 
-  const [pizzapi, setPizzAPI] = useState<Pizza[]>([]);
+  const [pizza, setPizza] = useState<Pizza>();
 
   useEffect(() => {
     async function fetchData() {
       const rawData = await fetch(`http://localhost:3715/pizzas/${id}`);
-      const cookedData = (await rawData.json()) as Pizza[];
-      setPizzAPI(cookedData);
+      const cookedData = (await rawData.json()) as Pizza;
+      setPizza(cookedData);
     }
     fetchData();
   }, [id]);
@@ -27,7 +27,7 @@ export default function Fiche() {
     <>
       <div>
         <p>
-          {pizzapi.nom} : {pizzapi.ingredients}
+          {pizza?.nom} : {pizza?.ingredients}
         </p>
       </div>
     </>
