@@ -10,25 +10,25 @@ type Pizza = {
 };
 
 export default function HomePage() {
-  const [pizza, setPizza] = useState<Pizza[]>([]);
+  const [pizzas, setPizzas] = useState<Pizza[]>([]);
 
   useEffect(() => {
     async function fetchData() {
       const rawData = await fetch("http://localhost:3715/pizzas");
       const cookedData = (await rawData.json()) as Pizza[];
-      setPizza(cookedData);
+      setPizzas(cookedData);
     }
     fetchData();
   }, []);
 
   return (
     <>
-      {pizza.map((pizza) => {
+      {pizzas.map((Pizza) => {
         return (
-          <div key={pizza.id}>
-            <Link to={`/pizzas/${pizza.id}`}>
+          <div key={Pizza.id}>
+            <Link to={`/pizzas/${Pizza.id}`}>
               <p>
-                {pizza.nom} : {pizza.ingredients}
+                {Pizza.nom} : {Pizza.ingredients}
               </p>
             </Link>
           </div>
